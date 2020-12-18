@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View , Button} from 'react-native';
 import { TextInput} from 'react-native-gesture-handler';
 import { Picker } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export function Home({navigation}) {
     const[valor,setValor]= React.useState(0.00);
@@ -41,7 +42,6 @@ export function Home({navigation}) {
             navigation.navigate('Resultado',{unidade});
         }
         
-        
     }
 
   return (
@@ -56,7 +56,7 @@ export function Home({navigation}) {
 
             <Picker
                 selectedValue={picker}
-                style={{height: 50, width: 159 , color:'#000', backgroundColor: '#000'}}
+                style={{height: 50, width: 159 , color:'#000', backgroundColor: '#5D946E'}}
                 onValueChange={selected => setPicker(selected)}
                 value={picker}>
                 <Picker.Item label="Unidade" value="NENHUM" />
@@ -69,7 +69,7 @@ export function Home({navigation}) {
 
 
         <View>
-            <Button title="Calcular" color="#000" onPress={() => converter()}/>
+            <Button title="Calcular" color="#5D946E" onPress={() => converter()}/>
         </View>
 
     </View>
@@ -111,3 +111,4 @@ const styles = StyleSheet.create({
     color:'#fff',
   },
 });
+//Não sei botar imagem e Icone ;-;
